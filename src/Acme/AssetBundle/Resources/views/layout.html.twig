@@ -10,3 +10,9 @@
     <h2>Welcome to Symfony2 + Assetic experiments</h2>
     {% block content %}{% endblock %}
 {% endblock %}
+
+{% block javascripts %}
+    {% javascripts '@AcmeAssetBundle/Resources/javascripts/main.js' filter='?closure' output='js/packed/app.js' %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
