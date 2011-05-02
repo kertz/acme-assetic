@@ -1,5 +1,12 @@
 {% extends "AcmeAssetBundle::layout.html.twig" %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets '@AcmeAssetBundle/Resources/sass/homepage.sass' filter='sass' output='css/packed/homepage.css' %}
+        <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
+    {% endstylesheets %}
+{% endblock %}
+
 {% block content %}
 <h4>Work in progress</h4>
 {% endblock %}

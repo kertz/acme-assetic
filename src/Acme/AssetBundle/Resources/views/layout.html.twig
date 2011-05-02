@@ -1,7 +1,7 @@
 {% extends '::base.html.twig' %}
 
 {% block stylesheets %}
-    {% stylesheets '@AcmeAssetBundle/Resources/sass/main.sass' filter='sass' output='*.css' %}
+    {% stylesheets '@AcmeAssetBundle/Resources/sass/main.sass' filter='sass' output='css/packed/app.css' %}
         <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
     {% endstylesheets %}
 {% endblock %}
