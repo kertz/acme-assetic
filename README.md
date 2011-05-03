@@ -18,10 +18,9 @@ After that run in your project root:
 
 compass create web/ --force
 
-Add compass in app/config.yml
+Add compass filter in app/config.yml
 ----------------------------------------
 
-::
 
 assetic:
     debug:          %kernel.debug%
@@ -40,8 +39,6 @@ assetic:
 
 Twig:
 ----------------------------------------
-
-::
 
 {% stylesheets '@AcmeCompassBundle/Resources/sass/main.scss' filter='compass' debug=true output='*.css' %}
      <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
