@@ -1,0 +1,43 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets '@AcmeCompassBundle/Resources/sass/main.scss' filter='compass' debug=true output='*.css' %}
+        <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
+    {% endstylesheets %}
+{% endblock stylesheets %}
+
+{% block body %}
+
+<div class='two-col'>
+  <div id='header'>
+    <h1>This is the Header</h1>
+  </div>
+  <div id='sidebar'>
+    <ul>
+      <li>
+        <a href='#'>Nav #1</a>
+      </li>
+      <li>
+        <a href='#'>Nav #2</a>
+      </li>
+      <li>
+        <a href='#'>Nav #3</a>
+      </li>
+    </ul>
+  </div>
+  <div id='content'>
+    <p>
+      Lorem ipsum dolor sit amet,
+      consectetur adipisicing elit, sed do
+      eiusmod tempor incididunt ut labore et
+      dolore magna aliqua.
+    </p>
+  </div>
+  <div id='footer'>
+    This is the footer.
+  </div>
+</div>
+
+
+{% endblock %}
