@@ -21,8 +21,6 @@ compass create web/ --force
 Add compass in app/config.yml
 ----------------------------------------
 
-::
-
 assetic:
     debug:          %kernel.debug%
     use_controller: false
