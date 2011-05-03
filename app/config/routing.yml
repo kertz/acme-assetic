@@ -2,3 +2,9 @@ _welcome:
     resource: "@AcmeAssetBundle/Controller/WelcomeController.php"
     type:     annotation
     prefix:   /
+
+_compass:
+    resource: "@AcmeCompassBundle/Controller/WelcomeController.php"
+    type:     annotation
+    prefix:   /compass
+
