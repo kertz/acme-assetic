@@ -5,7 +5,6 @@ Work in progress, will add more details soon.
 
 
 
-==============================
 Using Compass Filter
 ==============================
 
