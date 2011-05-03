@@ -1,7 +1,7 @@
 {% extends '::base.html.twig' %}
 
 {% block stylesheets %}
-    {% stylesheets '@AcmeAssetBundle/Resources/sass/main.sass' filter='sass' output='*.css' %}
+    {% stylesheets '@AcmeAssetBundle/Resources/sass/main.sass' filter='sass' output='css/packed/app.css' %}
         <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
     {% endstylesheets %}
 {% endblock %}
@@ -9,4 +9,10 @@
 {% block body %}
     <h2>Welcome to Symfony2 + Assetic experiments</h2>
     {% block content %}{% endblock %}
+{% endblock %}
+
+{% block javascripts %}
+    {% javascripts '@AcmeAssetBundle/Resources/javascripts/main.js' filter='?closure' output='js/packed/app.js' %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
 {% endblock %}

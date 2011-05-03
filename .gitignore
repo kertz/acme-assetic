@@ -5,3 +5,5 @@ app/logs/*
 build/
 vendor/
 .idea/
+web/css/packed/*
+web/js/packed/*
