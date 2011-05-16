@@ -1,10 +1,10 @@
 imports:
     - { resource: parameters.ini }
+    - { resource: assetic.yml }
 
 framework:
     secret:        %secret%
     charset:       UTF-8
-    error_handler: null
     csrf_protection:
         enabled: true
     router:        { resource: "%kernel.root_dir%/config/routing.yml" }
@@ -19,16 +19,3 @@ framework:
 twig:
     debug:            %kernel.debug%
     strict_variables: %kernel.debug%
-
-# Assetic Configuration
-assetic:
-    debug:          %kernel.debug%
-    use_controller: false
-    filters:
-        cssrewrite: ~
-        sass: ~
-        closure: ~
-        # closure:
-        #     jar: %kernel.root_dir%/java/compiler.jar
-        # yui_css:
-        #     jar: %kernel.root_dir%/java/yuicompressor-2.4.2.jar
