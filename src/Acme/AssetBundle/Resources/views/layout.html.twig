@@ -1,7 +1,7 @@
 {% extends '::base.html.twig' %}
 
 {% block stylesheets %}
-    {% stylesheets '@AcmeAssetBundle/Resources/sass/main.sass' filter='sass' output='css/packed/app.css' %}
+    {% stylesheets '@AcmeAssetBundle/Resources/sass/main.sass' output='css/packed/app.css' %}
         <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
     {% endstylesheets %}
 {% endblock %}
@@ -12,7 +12,9 @@
 {% endblock %}
 
 {% block javascripts %}
-    {% javascripts '@AcmeAssetBundle/Resources/javascripts/main.js' filter='?closure' output='js/packed/app.js' %}
+    {% javascripts filter='?closure' output='js/packed/app.js'
+        '@AcmeAssetBundle/Resources/javascripts/main.js'
+        '@AcmeAssetBundle/Resources/javascripts/grading.coffee' %}
         <script src="{{ asset_url }}"></script>
     {% endjavascripts %}
 {% endblock %}
