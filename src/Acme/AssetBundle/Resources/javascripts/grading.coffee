@@ -8,4 +8,4 @@ grade = (student) ->
 
 eldest = if 24 > 21 then "Liz" else "Ike"
 
-alert(grade({"excellentWork":true}));
+grade({"excellentWork":true});
